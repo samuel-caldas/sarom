@@ -1,0 +1,78 @@
+.tiles{
+}
+.tiles a{
+	display: block;
+}
+.tiles .tile, .tiles .bg{
+	height: 200px;
+	width: 180px;
+}
+.tiles .tile{
+	float: left;
+	margin: 9px;
+	border: 1px solid #333;
+	-webkit-transition: all 100ms ease 500ms;
+	-moz-transition: all 100ms ease 500ms;
+	-ms-transition: all 100ms ease 500ms;
+	-o-transition: all 100ms ease 500ms;
+	transition: all 100ms ease 500ms;
+}
+.tiles .tile:hover{
+	-moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.3);
+	-webkit-transition: all 100ms;
+	-moz-transition: all 100ms;
+	-ms-transition: all 100ms;
+	-o-transition: all 100ms;
+	transition: all 100ms;
+}
+.tiles .tile .bg{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 90% auto;
+	overflow: hidden;
+	float: right;
+	background-color: #FFF;
+	position: absolute;
+}
+.tiles .tile .bg .txt{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	background-color: rgba(0,0,0,0.3);
+	position: relative;
+	top: 150px;
+	padding: 5px;
+	width: 170px;
+	font-weight: lighter;
+	height: 200px;
+	-webkit-transition: all 100ms ease 100ms;
+	-moz-transition: all 100ms ease 100ms;
+	-ms-transition: all 100ms ease 100ms;
+	-o-transition: all 100ms ease 100ms;
+	transition: all 100ms ease 100ms;
+}
+.tiles .tile .bg:hover .txt{
+	top: 100px;
+	-webkit-transition: all 100ms;
+	-moz-transition: all 100ms;
+	-ms-transition: all 100ms;
+	-o-transition: all 100ms;
+	transition: all 100ms;
+}
+.tiles .tile .bg .txt h3{
+	padding: 0px;
+	font-size: 20px;
+	line-height: 40px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+}
+.tiles .tile .bg .txt p{
+	font-size: 11px;
+	line-height: 12px;
+}
+.tiles .titulo{
+	top:10px;
+}

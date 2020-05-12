@@ -1,0 +1,15 @@
+﻿<div class="carousel-bg">
+    	<div class="list_carousel">
+            <ul id="carousel">
+<?php
+while($row=mysql_fetch_row(mysql_query("SELECT * FROM  `carrossel` LIMIT 0 , 50"))){
+	echo
+'
+                <li style="background-image:url(http://www.rosasonline.com.br/config/imagens_conteudo/produtos/imagensPQN/PV_1008_RO.JPG)"></li>
+';
+}
+?>
+            </ul>
+		  <div id="timer" class="timer"></div>
+		</div>
+    </div>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Alertas</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+<script>
+function alerta(titulo,texto,ico){
+	
+}
+$(function () {
+	function deleta(){
+		$("#alert2").remove();
+	}
+});
+window.onclick=function(){
+	deleta()
+}
+
+</script>
+<style type="text/css">
+.alert {
+	padding: 0px;
+	background-color: #8C0095;
+	height: 100px;
+	width: 400px;
+	float: right;
+	-webkit-transition: all 500ms 500ms;
+	-moz-transition: all 500ms 500ms;
+	-ms-transition: all 500ms 500ms;
+	-o-transition: all 500ms 500ms;
+	transition: all 500ms 500ms;
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	color: #FFF;
+	font-family: Verdana, Arial, Geneva, sans-serif;
+}
+.alert .overlay{
+	border: 2px solid rgba(255,255,255,0.6);
+	height: 96px;
+	width: 396px;
+	position: absolute;
+	cursor: default;
+}
+.alert .overlay:hover .close {
+	visibility: visible;
+}
+.alert .overlay .close:hover {
+	background-color: rgba(255,255,255,0.3);
+	-webkit-transition: all 250ms ease 0ms;
+	-moz-transition: all 250ms ease 0ms;
+	-ms-transition: all 250ms ease 0ms;
+	-o-transition: all 250ms ease 0ms;
+	transition: all 250ms ease 0ms;
+}
+.alert .overlay .close {
+	float: right;
+	height: 25px;
+	width: 25px;
+	font-family: Verdana, Arial;
+	font-weight: bolder;
+	text-transform: uppercase;
+	font-size: 15px;
+	line-height: 25px;
+	letter-spacing: 0px;
+	text-align: center;
+	vertical-align: middle;
+	word-spacing: 0px;
+	color: rgba(255,255,255,0.8);
+	visibility: hidden;
+	-webkit-transition: all 1s ease 200ms;
+	-moz-transition: all 1s ease 200ms;
+	-ms-transition: all 1s ease 200ms;
+	-o-transition: all 1s ease 200ms;
+	transition: all 1s ease 200ms;
+	cursor: default;
+}
+.alert .ico{
+	height: 100px;
+	width: 100px;
+	float: right;
+	background-image: url(SAM_4213e.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	margin: 0px;
+}
+.alert .txt{
+	height: 60px;
+	width: 260px;
+	float: left;
+	padding: 20px;
+	display: block;
+	word-wrap: break-word;
+	font-size: 15px;
+	line-height: 20px;
+	font-family: Verdana, Arial, Geneva, sans-serif;
+}
+.alertlist{
+	width: 400px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #CCC;
+	-webkit-transition: all 0s 0s;
+	-moz-transition: all 0s 0s;
+	-ms-transition: all 0s 0s;
+	-o-transition: all 0s 0s;
+	transition: all 0s 0s;
+}
+body,td,th {
+	font-family: Verdana, Arial;
+}
+body {
+	background-image: url(wood.jpg);
+}
+</style>
+</head>
+
+<body>
+<div class="alertlist">
+    <div id="alert1" class="alert">
+    <div class="overlay"><div class="close" onClick="remove('alert1')">X</div></div>
+    	<div class="txt">
+       	  <strong>Titulo</strong>
+          0123456789012345678901234567890123456789012345678901
+		</div>
+        <div class="ico" id="ico"></div>
+        
+    </div>
+    <div id="alert2" class="alert">
+    <div class="overlay"><div class="close" onClick="remove('alert2')">X</div></div>
+    	<div class="txt">
+       	  <strong>Titulo</strong>
+          0123456789012345678901234567890123456789012345678901
+		</div>
+        <div class="ico" id="ico"></div>
+        
+    </div>
+    <div id="alert3" class="alert">
+    <div class="overlay"><div class="close" onClick="remove('alert3')">X</div></div>
+    	<div class="txt">
+       	  <strong>Titulo</strong>
+          0123456789012345678901234567890123456789012345678901
+		</div>
+        <div class="ico" id="ico"></div>
+        
+    </div>
+</div>
+<button>Remove the 3rd line.</button>
+</body>
+</html>

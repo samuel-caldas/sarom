@@ -1,0 +1,37 @@
+@charset "utf-8";
+.doc{
+	background-image: url(img/wp7_word.png);
+}
+.psd{
+	background-image: url(img/wp7_photoshop.png);
+}
+.txt{
+	background-image: url(img/wp7_writer.png);
+}
+.htm{
+	background-image: url(img/wp7_chrome.png);
+}
+.css{
+	background-image: url(img/wp7_dreamweaver.png);
+}
+.rar{
+	background-image: url(img/rar.png);
+}
+.img{
+	background-image: url(img/wp7_pictures.png);
+}
+.vd{
+	background-image: url(img/vid.png);
+}
+.au{
+	background-image: url(img/iTunes%20alt.png);
+}
+.exe{
+	background-image: url(img/exe.png);
+}
+.fold{
+	background-image: url(img/wp7_folder.png);
+}
+.ukn{
+	background-image: url(img/wp7_questionmark.png);
+}

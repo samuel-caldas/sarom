@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>METRO 1.0</title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" type="text/css" media="screen" />
+<link href="typefiles.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+body,td,th {
+	font-family: "Segoe UI";
+	color: #FFF;
+	font-weight: lighter;
+	-webkit-transition: all 50ms;
+	-moz-transition: all 50ms;
+	-ms-transition: all 50ms;
+	-o-transition: all 50ms;
+	transition: all 50ms;
+}
+body {
+	background-color: #000;
+	margin: 0px;
+	padding: 0px;
+}
+a:link, a:visited, a:hover, a:active {
+	text-decoration: none;
+	color: #FFF;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: "Segoe UI";
+	font-weight: lighter;
+	text-transform: capitalize;
+}
+.top{
+	display: block;
+	height: 100px;
+	margin-left: 50px;
+}
+.top h1{
+	font-size: 60px;
+	line-height: 100px;
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	vertical-align: middle;
+	display: block;
+}
+.tiles{
+	display: block;
+	position: relative;
+	width: auto;
+	padding-right: 50px;
+	padding-left: 50px;
+}
+.tile{
+	word-wrap: break-word;
+	display: block;
+	float: left;
+	height: 120px;
+	width: 120px;
+	margin: 6px;
+	border: 1px solid #FFF;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	cursor: default;
+	text-shadow: 1px 1px 1px rgba(51,51,51,0.9);
+	padding: 4px;
+	text-align: left;
+	vertical-align: bottom;
+}
+.largo{
+	width: 260px;
+}
+.tile:hover{
+	-moz-box-shadow: 0px 0px 3px 3px rgba(255,255,255,0.5);
+	-webkit-box-shadow: 0px 0px 3px 3px rgba(255,255,255,0.5);
+	box-shadow: 0px 0px 3px 3px rgba(255,255,255,0.5);
+}
+.selecionado{
+	border-top-width: 5px;
+	border-right-width: 5px;
+	border-bottom-width: 5px;
+	border-left-width: 5px;	
+}
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script type="text/javascript" src="https://raw.github.com/furf/jquery-ui-touch-punch/master/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="jquery.cookie.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".tiles").sortable({
+		update: function( event, ui ) {
+			//alert($(this).html());
+			$.cookie('the_cookie', 'the_value');
+			alert($.cookie('the_cookie'));
+		}
+	});
+	$(".tile").contextmenu(function(e) {
+		if(!$(this).hasClass("selecionado")){
+			$(this).addClass("selecionado");
+		}else{
+			$(this).removeClass("selecionado");
+		}
+        return false;
+    });
+	$(".tile").resizable({
+		handles: "e",
+      	grid: 140,
+	  	maxHeight: 128,
+      	maxWidth: 268,
+      	minHeight: 128,
+      	minWidth: 128
+    });
+	$("body").disableSelection(); 
+});
+
+</script>
+</head>
+<body>
+<div class="top"><h1>Início</h1></div>
+<div class="tiles">
+	<a href="#"  class="tile largo vd">Teste de texto</a>
+	<a href="#"  class="tile largo css"></a>
+    <a href="#" class="tile doc"></a>
+    <a href="#"  class="tile exe"></a>
+    <a href="#"  class="tile largo fold">Teste de texto</a>
+    <a href="#"  class="tile largo htm"></a>
+    <a href="#" class="tile img"></a>
+    <a href="#"  class="tile psd"></a>
+    <a href="#"  class="tile largo rar"></a>
+    <a href="#"  class="tile largo txt">Teste de texto</a>
+</div>
+</body>
+</html>
